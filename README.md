@@ -1,4 +1,6 @@
-# SimulIDE 0.3.10
+# SimulIDE
+
+Original Project Homepage: https://www.simulide.com/
 
 Electronic Circuit Simulator
 
