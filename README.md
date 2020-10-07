@@ -1,5 +1,7 @@
 # SimulIDE
 
+Original Project Homepage: https://www.simulide.com/
+
 Electronic Circuit Simulator
 
 
