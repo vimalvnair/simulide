@@ -1,0 +1,6 @@
+.DS_Store
+.qmake.stash
+Makefile
+build_XX/build/
+build_XX/release/
+build_XX/qrc_application.cpp

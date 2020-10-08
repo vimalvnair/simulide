@@ -63,7 +63,7 @@ MainWindow::MainWindow()
     loadCircHelp();
     createWidgets();
     readSettings();
-    
+    applyStyle();
     loadPlugins();
 
     QString backPath = m_settings.value( "backupPath" ).toString();
@@ -344,9 +344,12 @@ void MainWindow::unLoadPugin( QString pluginName )
     }
 }
 
-void MainWindow::applyStile()
+void MainWindow::applyStyle()
 {
-    QFile file(":/simulide.qss");
+    QDir dataGuiDir(qApp->applicationDirPath());
+    dataGuiDir.cd("../share/simulide/data/gui");
+
+    QFile file(dataGuiDir.absoluteFilePath("simulide.qss"));
     file.open(QFile::ReadOnly);
 
     m_styleSheet = QLatin1String(file.readAll());
