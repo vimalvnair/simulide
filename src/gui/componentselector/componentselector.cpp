@@ -332,7 +332,10 @@ void ComponentSelector::slotItemClicked( QTreeWidgetItem* item, int column )
     
     QString type = item->data(0, Qt::UserRole).toString();
     
-    if( type == "" ) return;
+    if( type == "" ){
+      item->setExpanded(!item->isExpanded());
+      return;
+    }
     
     QMimeData* mimeData = new QMimeData;
     
